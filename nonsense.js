@@ -136,7 +136,7 @@ for(let i = 0; i < c; i++) {
             } else if(rng3 == 0) {
                 rng1 = 1;
             } else {
-                rng1 = 2;
+                rng1 = 0;
             }
         break;
         case 4:
