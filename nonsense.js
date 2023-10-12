@@ -19,7 +19,6 @@ for(let i = 0; i < 5; i++) {
     }
 }
 }
-alert(localword);
 var save = function() {
     let saveload = prompt("what load to save in? some number between 0 and 9");
     if(confirm("This load name is " + localStorage.getItem(saveload) + ", do you want to change this load name?")) {
