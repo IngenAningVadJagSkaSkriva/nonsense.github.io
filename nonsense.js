@@ -3,7 +3,7 @@ function RB(min, max) {
 }
 var word = [
     ["attractive","agreeable","angry","big","bald","ambitious","bewildered","colossal","beautiful","fat","skinny","silly","small","short","chubby"], //adjective
-    ["people","history","way","art","world","information","map","family","health","computer","kiss","knowledge","friend","land","approval"], //noun
+    ["people","history","way","art","world","information","map","family","health","computer","phone","knowledge","friend","land","approval"], //noun
     ["accept","accuse","achieve","blow","communicate","exist","go","imagine","generate","burn","destroy","drinks","eat","kill","behave"], //verb
     ["fatally","accidentally","anxiously","hungrily","often","unnaturally","silently","soon","painfully","too","greedily","hard","rapidly","quickly","poorly"], //adverb
     ["me","us","we","he","mine","myself","I","my","your","our","everyone","no one","somewhat","nobody","such"] //pronouns
@@ -32,7 +32,7 @@ var save = function() {
 }
 var load = function() {
     let saveload = prompt("what load to load? some number between 0 and 9");
-    if(confirm("This load name is " + localStorage.getItem(saveload) + ", do you want to change this load name?")) {
+    if(confirm('This load name is "' + localStorage.getItem(saveload) + '", do you want to change this load name?')) {
         localStorage.setItem(saveload,prompt("NEW NAME"));
     }
     for(let i = 0; i < 5; i++) {
@@ -71,7 +71,7 @@ var list = function() {
 var editlist = function() {
     let x = prompt("TYPE THE X COORDINATE");
     let y = prompt("TYPE THE Y COORDINATE");
-    let change = prompt(word[y][x] + " IS THE WORD, WHAT DO YOU WANT TO CHANGE IT TO?");
+    let change = prompt('"' + word[y][x] + '" IS THE WORD, WHAT DO YOU WANT TO CHANGE IT TO?');
     if(change == null) change = word[y][x];
     word[y][x] = change;
     list();
