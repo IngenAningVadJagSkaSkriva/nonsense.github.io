@@ -91,9 +91,11 @@ var k = 0;
 var WPL = 10;
 var WPLC = 0;
 alert("A window will be open that the text will be written into! DONT CLOSE IT AND THE WINDOW MAY BE EMPTY FOR SOME TIME IF THE TEXT IS LOADING!");
+alert("CLICK THE WINDOW IF YOU WANT TO PRINT THE TEXT!");
 var w = window.open('','','HEIGHT=' + (screen.height / 2) + ",WIDTH=" + (screen.width / 2));
 w.moveTo((screen.width - w.outerWidth),(screen.height - w.outerHeight));
 document.title = "generating......"
+w.document.write('<body onclick="print()"</body>');
 for(let i = 0; i < c; i++) {
     rng2 = RB(0,14);
     rng3 = RB(0,2);
